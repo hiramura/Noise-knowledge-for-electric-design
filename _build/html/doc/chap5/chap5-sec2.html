@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5.2. 通信ユニットの接地 &mdash; 装置電気設計に関する知見 0.90 ドキュメント</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="5.3. プロセスモジュールの接地" href="chap5-sec3.html" />
+    <link rel="prev" title="5.1. 制御系電源の絶縁" href="chap5-sec1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> 装置電気設計に関する知見
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../chap1.html">1. ノイズについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap2.html">2. ノイズの発生源</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap3.html">3. ノイズの伝搬</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap4.html">4. ノイズ対策の概要</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../chap5.html">5. ノイズ対策の実例  EtherNet/IPの通信不良</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chap5-sec1.html">5.1. 制御系電源の絶縁</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.2. 通信ユニットの接地</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">5.2.1. 設計の問題点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">5.2.2. 対策</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">5.2.3. 教訓</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chap5-sec3.html">5.3. プロセスモジュールの接地</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap5-sec4.html">5.4. LANケーブルの変更</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap5-sec5.html">5.5. チラーに搭載されていた電磁弁の変更</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">装置電気設計に関する知見</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../chap5.html"><span class="section-number">5. </span>ノイズ対策の実例  EtherNet/IPの通信不良</a> &raquo;</li>
+      <li><span class="section-number">5.2. </span>通信ユニットの接地</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/doc/chap5/chap5-sec2.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1><span class="section-number">5.2. </span>通信ユニットの接地<a class="headerlink" href="#id1" title="この見出しへのパーマリンク"></a></h1>
+<section id="id2">
+<h2><span class="section-number">5.2.1. </span>設計の問題点<a class="headerlink" href="#id2" title="この見出しへのパーマリンク"></a></h2>
+<p>通信ユニットの接地の目的は機能接地です。本来であれば電位の変動が極力少ない
+接地線を接続する必要性があったのですが、当初の設計では以下の問題がありました。</p>
+<ul class="simple">
+<li><p>接地線がAC200V系の電装盤内を経由しており、AC電源系のノイズの影響を受けていた</p></li>
+<li><p>接地線がそれぞれの通信ユニットに独立に配線されておらず、接地線を共用しているので共通インピーダンスが出来ていた</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2><span class="section-number">5.2.2. </span>対策<a class="headerlink" href="#id3" title="この見出しへのパーマリンク"></a></h2>
+<p>接地線を各通信ユニット毎に独立に配線し、且つAC系のノイズの影響を受けない
+経路でアースバーに直結した。</p>
+</section>
+<section id="id4">
+<h2><span class="section-number">5.2.3. </span>教訓<a class="headerlink" href="#id4" title="この見出しへのパーマリンク"></a></h2>
+<ul class="simple">
+<li><p>ノイズ対策に於いて接地の取り方は非常に重要であると認識する事</p></li>
+<li><p>保護接地と機能接地の目的の違いを理解する事</p></li>
+<li><p>ノイズにおける共通インピーダンスの影響を理解する事</p></li>
+<li><p>機器の取扱説明書を熟読し、正しい使い方を良く理解する事</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="chap5-sec1.html" class="btn btn-neutral float-left" title="5.1. 制御系電源の絶縁" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="chap5-sec3.html" class="btn btn-neutral float-right" title="5.3. プロセスモジュールの接地" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, SPT.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3.2. コモンモードとノーマルモード &mdash; 装置電気設計に関する知見 0.90 ドキュメント</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="3.3. 静電誘導" href="chap3-sec3.html" />
+    <link rel="prev" title="3.1. 伝導性ノイズと放射性ノイズ" href="chap3-sec1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> 装置電気設計に関する知見
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../chap1.html">1. ノイズについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap2.html">2. ノイズの発生源</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../chap3.html">3. ノイズの伝搬</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chap3-sec1.html">3.1. 伝導性ノイズと放射性ノイズ</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.2. コモンモードとノーマルモード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap3-sec3.html">3.3. 静電誘導</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap3-sec4.html">3.4. 電磁誘導</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../chap4.html">4. ノイズ対策の概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap5.html">5. ノイズ対策の実例  EtherNet/IPの通信不良</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">装置電気設計に関する知見</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../chap3.html"><span class="section-number">3. </span>ノイズの伝搬</a> &raquo;</li>
+      <li><span class="section-number">3.2. </span>コモンモードとノーマルモード</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/doc/chap3/chap3-sec2.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1><span class="section-number">3.2. </span>コモンモードとノーマルモード<a class="headerlink" href="#id1" title="この見出しへのパーマリンク"></a></h1>
+<p>伝導性ノイズの伝わり方には次の2つのモードがあります。</p>
+<ul class="simple">
+<li><p><strong>コモンモード</strong></p></li>
+<li><p><strong>ノーマルモード</strong></p></li>
+</ul>
+<p>電気回路は一周りの経路に電流が流れることを基本としています。この回路の一部を下図左のようにケーブルとして取り出すとき、
+ケーブルには2本の配線があって、往復の電流が流れています。このとき流れる電流は、逆方向に同じ大きさになっていますので、
+ケーブル全体では必ずゼロになります。このような電流の流れ方をノーマルモードといいます。</p>
+<p>これに対して、下図右のようにケーブル内の線に同じ向きに電流が流れる場合があり、コモンモードと呼ばれています。
+コモンモードは図のように、何らかの形で各線に同一の電圧が加わり、同一方向の電流が流れる成分です。この電流は図のように、
+負荷が大地に対して持つ浮遊静電容量などを介して漏れた電流が、大地を経由してノイズ源に帰還すると考えることができます。
+（大地を経由しなくても、負荷とノイズ源が直接つながって流れる場合もあります）</p>
+<img alt="../../_images/common_mode_normal_mode.png" src="../../_images/common_mode_normal_mode.png" />
+<div class="line-block">
+<div class="line">上記は以下サイトから抜粋引用しています。</div>
+<div class="line"><a class="reference external" href="https://www.murata.com/ja-jp/products/emc/emifil/library/knowhow/basic/chapter05-p1">https://www.murata.com/ja-jp/products/emc/emifil/library/knowhow/basic/chapter05-p1</a></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="chap3-sec1.html" class="btn btn-neutral float-left" title="3.1. 伝導性ノイズと放射性ノイズ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="chap3-sec3.html" class="btn btn-neutral float-right" title="3.3. 静電誘導" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, SPT.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

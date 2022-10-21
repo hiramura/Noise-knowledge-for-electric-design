@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5.4. LANケーブルの変更 &mdash; 装置電気設計に関する知見 0.90 ドキュメント</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="5.5. チラーに搭載されていた電磁弁の変更" href="chap5-sec5.html" />
+    <link rel="prev" title="5.3. プロセスモジュールの接地" href="chap5-sec3.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> 装置電気設計に関する知見
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../chap1.html">1. ノイズについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap2.html">2. ノイズの発生源</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap3.html">3. ノイズの伝搬</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap4.html">4. ノイズ対策の概要</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../chap5.html">5. ノイズ対策の実例  EtherNet/IPの通信不良</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chap5-sec1.html">5.1. 制御系電源の絶縁</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap5-sec2.html">5.2. 通信ユニットの接地</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap5-sec3.html">5.3. プロセスモジュールの接地</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.4. LANケーブルの変更</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">5.4.1. 設計の問題点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">5.4.2. 対策</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">5.4.3. 教訓</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chap5-sec5.html">5.5. チラーに搭載されていた電磁弁の変更</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">装置電気設計に関する知見</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../chap5.html"><span class="section-number">5. </span>ノイズ対策の実例  EtherNet/IPの通信不良</a> &raquo;</li>
+      <li><span class="section-number">5.4. </span>LANケーブルの変更</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/doc/chap5/chap5-sec4.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lan">
+<h1><span class="section-number">5.4. </span>LANケーブルの変更<a class="headerlink" href="#lan" title="この見出しへのパーマリンク"></a></h1>
+<section id="id1">
+<h2><span class="section-number">5.4.1. </span>設計の問題点<a class="headerlink" href="#id1" title="この見出しへのパーマリンク"></a></h2>
+<p>EtherNet/IP通信では制御機器間をLANケーブルで接続しネットワークを構成します。
+当初ノイズ対策に効果があるとの認識で二重シールド施工されたLANケーブルを使って
+いました。</p>
+<p>ところが、このシールド線でグランドループが形成されてしまい外部ノイズの影響を
+受け易くなっていました。この影響で通信ユニットの機能接地ラインの電位が変動
+してしまい通信異常を発生させていました。</p>
+<p>メーカの取り扱い説明書を確認するとネットワークを構成する時の注意事項としてLANケーブル
+のシールドについて記載があります。</p>
+<p>この中でLANケーブルの両端でシールドを介して通信機器の通信ポートと金属的に導通すると
+グランドループが形成されてノイズ耐量が低下する旨下図の説明がありました。</p>
+<img alt="../../_images/lancable_notes.png" src="../../_images/lancable_notes.png" />
+</section>
+<section id="id2">
+<h2><span class="section-number">5.4.2. </span>対策<a class="headerlink" href="#id2" title="この見出しへのパーマリンク"></a></h2>
+<p>LANケーブルをシールド施工の無いツイストペアタイプ（CAT5E)に変更しました。</p>
+<p>下図の様にケーブル変更でノイズレベルは低下しています。</p>
+<img alt="../../_images/noise_improve_by_lancable.png" src="../../_images/noise_improve_by_lancable.png" />
+</section>
+<section id="id3">
+<h2><span class="section-number">5.4.3. </span>教訓<a class="headerlink" href="#id3" title="この見出しへのパーマリンク"></a></h2>
+<ul class="simple">
+<li><p>グランドループが出来るとノイズの影響を受け易くなる事を理解する事</p></li>
+<li><p>機器の取扱説明書を熟読し、正しい使い方を良く理解する事</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="chap5-sec3.html" class="btn btn-neutral float-left" title="5.3. プロセスモジュールの接地" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="chap5-sec5.html" class="btn btn-neutral float-right" title="5.5. チラーに搭載されていた電磁弁の変更" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, SPT.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
