@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2.2. 装置内部のノイズ源 &mdash; 装置電気設計に関する知見 0.90 ドキュメント</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=dd5257f4"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="2.3. 装置外部のノイズ源" href="chap2-sec3.html" />
+    <link rel="prev" title="2.1. 内部ノイズと外部ノイズ" href="chap2-sec1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            装置電気設計に関する知見
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../chap1.html">1. ノイズについて</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../chap2.html">2. ノイズの発生源</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chap2-sec1.html">2.1. 内部ノイズと外部ノイズ</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.2. 装置内部のノイズ源</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap2-sec3.html">2.3. 装置外部のノイズ源</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../chap3.html">3. ノイズの伝搬</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap4.html">4. ノイズ対策の概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap5.html">5. ノイズ対策の実例  EtherNet/IPの通信不良</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">装置電気設計に関する知見</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../chap2.html"><span class="section-number">2. </span>ノイズの発生源</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2.2. </span>装置内部のノイズ源</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/doc/chap2/chap2-sec2.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1><span class="section-number">2.2. </span>装置内部のノイズ源<a class="headerlink" href="#id1" title="この見出しへのパーマリンク"></a></h1>
+<p class="linemarker linemarker-4">装置内には様々な機器が設置されています。それぞれ電気的な使用電圧の違いや周波数の違いがあり機器間の距離
+が近いと相互に影響を及ぼす可能性があります。これが装置内部のノイズになります。</p>
+<p class="linemarker linemarker-7">機器が動作する事で大きな電流の変化が発生するとその周辺の磁場が変化します。また磁場の変化はその周辺に電場の変化を
+起こします。電場と磁場は相互に関連しており、電磁気学の理論で説明されますが、自然法則ですのでこの現象自体を制御する
+事は出来ません。</p>
+<p class="linemarker linemarker-11">特に大きなノイズを発生する装置内で使われている機器</p>
+<span class="target" id="index-0"></span><ul class="simple" id="index-1">
+<li><p class="linemarker linemarker-16">リレー、コンタクタ、ソレノイド等の誘導性負荷</p></li>
+<li><p class="linemarker linemarker-17">スイッチング電源、サーボドライバのような内部で高速なスイッチングデバイスを使う機器</p></li>
+<li><p class="linemarker linemarker-18">高周波電源（周波数が高い、エネルギーが大きい）</p></li>
+<li><p class="linemarker linemarker-19">ポンプ、チラーの様な比較的大きなモータを使っている機器（エネルギーが大きい）</p></li>
+<li><p class="linemarker linemarker-20">ヒータの電力調整器（電流の変化）</p></li>
+</ul>
+<p class="linemarker linemarker-22">誘導性負荷はコイルに印可される電圧がOFFからON、又はONからOFFに変化する瞬間に大きな
+逆起電力が発生します。一般的にはサージノイズと呼ばれるノイズとなります。定格電圧の数倍を超える
+電圧が発生しますので機器内の電子デバイスが故障する場合があります。</p>
+<p class="linemarker linemarker-26">あるチラーでは標準部分はCE対応しておりEMC対策されていたのですが、非標準
+部に使っていた電磁弁のコイルにサージ対策がされていませんでした。
+その為その電磁弁が動作した時にサージノイズが発生し我々の装置に影響を及ぼしていた
+事例があります。</p>
+<p class="linemarker linemarker-31">ポンプ、チラーのような購入品についても製品内で使っている部品に対してノイズ
+対策がなされているか良く確認しておく事が大切です。</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="chap2-sec1.html" class="btn btn-neutral float-left" title="2.1. 内部ノイズと外部ノイズ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="chap2-sec3.html" class="btn btn-neutral float-right" title="2.3. 装置外部のノイズ源" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, SPT.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

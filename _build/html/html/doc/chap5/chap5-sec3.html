@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5.3. プロセスモジュールの接地 &mdash; 装置電気設計に関する知見 0.90 ドキュメント</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=dd5257f4"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="5.4. LANケーブルの変更" href="chap5-sec4.html" />
+    <link rel="prev" title="5.2. 通信ユニットの接地" href="chap5-sec2.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            装置電気設計に関する知見
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../chap1.html">1. ノイズについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap2.html">2. ノイズの発生源</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap3.html">3. ノイズの伝搬</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap4.html">4. ノイズ対策の概要</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../chap5.html">5. ノイズ対策の実例  EtherNet/IPの通信不良</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chap5-sec1.html">5.1. 制御系電源の絶縁</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap5-sec2.html">5.2. 通信ユニットの接地</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.3. プロセスモジュールの接地</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">5.3.1. 設計の問題点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">5.3.2. 対策</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">5.3.3. 教訓</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chap5-sec4.html">5.4. LANケーブルの変更</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap5-sec5.html">5.5. チラーに搭載されていた電磁弁の変更</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap5-sec6.html">5.6. ノイズフィルタの配線施工の変更</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">装置電気設計に関する知見</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../chap5.html"><span class="section-number">5. </span>ノイズ対策の実例  EtherNet/IPの通信不良</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">5.3. </span>プロセスモジュールの接地</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/doc/chap5/chap5-sec3.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1><span class="section-number">5.3. </span>プロセスモジュールの接地<a class="headerlink" href="#id1" title="この見出しへのパーマリンク"></a></h1>
+<section id="id2">
+<h2><span class="section-number">5.3.1. </span>設計の問題点<a class="headerlink" href="#id2" title="この見出しへのパーマリンク"></a></h2>
+<p class="linemarker linemarker-7">この事例の装置は大きく分けると以下の部分から構成されています。</p>
+<ul class="simple">
+<li><p class="linemarker linemarker-9">19インチラック（メインブレーカが設置されている）</p></li>
+<li><p class="linemarker linemarker-10">プロセスモジュール</p></li>
+<li><p class="linemarker linemarker-11">搬送系</p></li>
+<li><p class="linemarker linemarker-12">補器類（ポンプ、チラー）</p></li>
+</ul>
+<p class="linemarker linemarker-14">お客様から供給頂いた大元の接地線は初めに19インチラックの電装盤に接続されます。
+この電装盤内の端子台で接地線が分岐され、19インチラックの端子台からプロセスモジュールの端子台に
+配線、接続されます。</p>
+<p class="linemarker linemarker-18">メイン分電盤と19インチラック間の接地線を19インチラックとプロセスモジュールで
+共有しているので、この部分は <strong>共通インピーダンス</strong> となっていました。その為に接地線に流れるノイズ電流
+が互いの機器に影響を及ぼし通信異常を発生させていました。</p>
+<p class="linemarker linemarker-22">メーカの取り扱い説明書を確認すると通信ユニットの接地の目的は機能接地と記載があります。
+保護接地に比べ機能接地は電位の変動を極力少なくする様な設計的配慮が必要であったが考慮されていなかった。</p>
+</section>
+<section id="id3">
+<h2><span class="section-number">5.3.2. </span>対策<a class="headerlink" href="#id3" title="この見出しへのパーマリンク"></a></h2>
+<p class="linemarker linemarker-28">プロセスモジュールの接地線は19インチラックを経由せず、メイン分電盤から直接配線し
+一点接地の形に変更した。</p>
+<img alt="../../_images/pm_earthline_improve.png" src="../../_images/pm_earthline_improve.png" />
+</section>
+<section id="id4">
+<h2><span class="section-number">5.3.3. </span>教訓<a class="headerlink" href="#id4" title="この見出しへのパーマリンク"></a></h2>
+<ul class="simple">
+<li><p class="linemarker linemarker-36">ノイズ対策に於いて接地の取り方は非常に重要であると認識する事</p></li>
+<li><p class="linemarker linemarker-37">保護接地と機能接地の目的の違いを理解する事</p></li>
+<li><p class="linemarker linemarker-38">ノイズにおける共通インピーダンスの影響を理解する事</p></li>
+<li><p class="linemarker linemarker-39">機器の取扱説明書を熟読し、正しい使い方を良く理解する事</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="chap5-sec2.html" class="btn btn-neutral float-left" title="5.2. 通信ユニットの接地" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="chap5-sec4.html" class="btn btn-neutral float-right" title="5.4. LANケーブルの変更" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, SPT.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

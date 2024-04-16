@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4.1. グランド、フレームグランド、アース &mdash; 装置電気設計に関する知見 0.90 ドキュメント</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=dd5257f4"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="4.2. ノイズ対策の基本" href="chap4-sec2.html" />
+    <link rel="prev" title="4. ノイズ対策の概要" href="../chap4.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            装置電気設計に関する知見
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../chap1.html">1. ノイズについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap2.html">2. ノイズの発生源</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap3.html">3. ノイズの伝搬</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../chap4.html">4. ノイズ対策の概要</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.1. グランド、フレームグランド、アース</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gnd">4.1.1. グランド（GND）とは</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fg">4.1.2. フレームグランド（FG）とは</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">4.1.3. アース（接地）とは</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chap4-sec2.html">4.2. ノイズ対策の基本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap4-sec3.html">4.3. シールド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap4-sec4.html">4.4. フィルタ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap4-sec5.html">4.5. フィルタとグラウンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap4-sec6.html">4.6. 接地線からのノイズ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap4-sec7.html">4.7. 電源線ラインからのノイズ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap4-sec8.html">4.8. 通信線からのノイズ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap4-sec9.html">4.9. 機器の使用方法の確認</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../chap5.html">5. ノイズ対策の実例  EtherNet/IPの通信不良</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">装置電気設計に関する知見</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../chap4.html"><span class="section-number">4. </span>ノイズ対策の概要</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4.1. </span>グランド、フレームグランド、アース</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/doc/chap4/chap4-sec1.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1><span class="section-number">4.1. </span>グランド、フレームグランド、アース<a class="headerlink" href="#id1" title="この見出しへのパーマリンク"></a></h1>
+<p class="linemarker linemarker-4">これらの用語に関して誤解の無いように以下に説明します。</p>
+<section id="gnd">
+<h2><span class="section-number">4.1.1. </span>グランド（GND）とは<a class="headerlink" href="#gnd" title="この見出しへのパーマリンク"></a></h2>
+<p class="linemarker linemarker-9">回路動作の基準となる電位で、ここを0V電位と設定し、様々な素子の電位的足場として使用します。
+その各素子が必要とする電流により、高周波域での電位変動が多発する場所とも言えます。
+そのため電圧変動を嫌うアナログGNDと電圧変動の要因となりやすいデジタルGNDを分ける（共用しない）
+のが一般的です。</p>
+</section>
+<section id="fg">
+<h2><span class="section-number">4.1.2. </span>フレームグランド（FG）とは<a class="headerlink" href="#fg" title="この見出しへのパーマリンク"></a></h2>
+<p class="linemarker linemarker-17">機器の金属としての体積が大きいところを、一般に外装フレームであることが多いので、フレームグランド（FG）
+と呼んでいます。ただし、機器の最外壁となるのでシールドとしての機能を持たせることも多いため、過度のシールド
+電流が流れる構造になってしまうと、機器内部のノイズを外部へ放出する放射アンテナとなったり、機器内部へ外界ノイズ
+を伝搬する受信アンテナになってしまう恐れがあります。</p>
+<p class="linemarker linemarker-22">FGは後述の安全上の理由を除いて必ずしもアース接続されている必要はありません（例えばモバイル機器などは、
+そもそも接続が不可能です）。
+また、機器間接続にシールドケーブルを使用する際はシールドはGNDではなくFGと接続することになります。</p>
+</section>
+<section id="id2">
+<h2><span class="section-number">4.1.3. </span>アース（接地）とは<a class="headerlink" href="#id2" title="この見出しへのパーマリンク"></a></h2>
+<p class="linemarker linemarker-29">FGを地球につなぐことです。大きくは目的別に</p>
+<ul class="simple">
+<li><p class="linemarker linemarker-31"><strong>保護接地</strong></p></li>
+<li><p class="linemarker linemarker-32"><strong>機能接地</strong></p></li>
+<li><p class="linemarker linemarker-33"><strong>雷保護用接地</strong></p></li>
+</ul>
+<p class="linemarker linemarker-35">の三つに分けられます。
+装置側で考慮必要なのは保護接地と機能接地になります。</p>
+<p class="linemarker linemarker-38">保護接地は感電防止などの目的でJISなどの安全規格に基づき接続するものです。配線の色や接地端子の表示など、
+細かく規定されています。装置仕様書内でお客様に必要なアース仕様について記載しています。</p>
+<p class="linemarker linemarker-41">機能接地は機器にて地球のゼロ電位が必要な際に接続するものです。目的は電気設備や機器の安定した動作を確保する為です。
+電位をとることが目的ですので、静電気の放電時などを除いて電流は流れないのが本来です。
+電流が流れている事は電位の変動があるという事なので機能接地として有効ではありません。</p>
+<p class="linemarker linemarker-45">保護接地と機能接地は目的が異なりますので電気設計時には明確に区別して下さい。
+理想的には別々に接地するのが良いです。</p>
+<div class="line-block">
+<div class="line">接地に関する詳細は以下URLを参照下さい。</div>
+<div class="line"><a class="reference external" href="https://www.sankosha.co.jp/earthing-systems/what-is-earthing/">https://www.sankosha.co.jp/earthing-systems/what-is-earthing/</a></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../chap4.html" class="btn btn-neutral float-left" title="4. ノイズ対策の概要" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="chap4-sec2.html" class="btn btn-neutral float-right" title="4.2. ノイズ対策の基本" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, SPT.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

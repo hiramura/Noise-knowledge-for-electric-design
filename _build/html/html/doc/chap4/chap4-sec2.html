@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4.2. ノイズ対策の基本 &mdash; 装置電気設計に関する知見 0.90 ドキュメント</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=dd5257f4"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="4.3. シールド" href="chap4-sec3.html" />
+    <link rel="prev" title="4.1. グランド、フレームグランド、アース" href="chap4-sec1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            装置電気設計に関する知見
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../chap1.html">1. ノイズについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap2.html">2. ノイズの発生源</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chap3.html">3. ノイズの伝搬</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../chap4.html">4. ノイズ対策の概要</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chap4-sec1.html">4.1. グランド、フレームグランド、アース</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.2. ノイズ対策の基本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap4-sec3.html">4.3. シールド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap4-sec4.html">4.4. フィルタ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap4-sec5.html">4.5. フィルタとグラウンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap4-sec6.html">4.6. 接地線からのノイズ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap4-sec7.html">4.7. 電源線ラインからのノイズ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap4-sec8.html">4.8. 通信線からのノイズ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap4-sec9.html">4.9. 機器の使用方法の確認</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../chap5.html">5. ノイズ対策の実例  EtherNet/IPの通信不良</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">装置電気設計に関する知見</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../chap4.html"><span class="section-number">4. </span>ノイズ対策の概要</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4.2. </span>ノイズ対策の基本</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/doc/chap4/chap4-sec2.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1><span class="section-number">4.2. </span>ノイズ対策の基本<a class="headerlink" href="#id1" title="この見出しへのパーマリンク"></a></h1>
+<p class="linemarker linemarker-4">ノイズ障害は、下図に示すように、ノイズの発生源と、ノイズの影響受ける対象機器と、伝搬経路の3者が存在するときに発生します。
+これらの要素のうちの一つを無くすことができれば、ノイズ障害は無くなります。
+したがって、ノイズの発生源や対象機器で対策することも可能です。</p>
+<p class="linemarker linemarker-8">例えば、デジタル回路やスイッチング電源、発信機などを一切使わなければ、電子機器の発生するノイズはごく小さくなります。
+また、対象機器側でもソフトの冗長処理などで、多少情報が変化しても信号を回復できる場合があります。
+これらの手段は根本解決になり得る場合もあるのですが、多くの場合は電子機器の性能を著しく劣化させたり、
+大型になるなどの副作用が大きく、現実的ではありません。</p>
+<img alt="../../_images/noise_creation_diagram.png" src="../../_images/noise_creation_diagram.png" />
+<p class="linemarker linemarker-15">そこで通常は、下図に示すように、伝搬経路でノイズを遮断することが行われています。ノイズの伝導には空間伝導と導体伝導の2種類がありますが、
+図に示すように空間伝導にはシールドが、導体伝導にはフィルタが使われます。</p>
+<p class="linemarker linemarker-18">空間伝導と導体伝導は、配線をアンテナとして相互に変換される性質があります。したがって、ある箇所で導体伝導だけが問題であったとしても、
+空間伝導を全く配慮しないでよいということにはなりません。</p>
+<img alt="../../_images/noise_countermeasure_methods.png" src="../../_images/noise_countermeasure_methods.png" />
+<div class="line-block">
+<div class="line">上記内容は下記サイトから抜粋引用しています。</div>
+<div class="line"><a class="reference external" href="https://www.murata.com/ja-jp/products/emc/emifil/library/knowhow/basic/chapter01-p1#03">https://www.murata.com/ja-jp/products/emc/emifil/library/knowhow/basic/chapter01-p1#03</a></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="chap4-sec1.html" class="btn btn-neutral float-left" title="4.1. グランド、フレームグランド、アース" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="chap4-sec3.html" class="btn btn-neutral float-right" title="4.3. シールド" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, SPT.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

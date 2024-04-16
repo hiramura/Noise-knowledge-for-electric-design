@@ -12,3 +12,4 @@ V5装置で採用したEthernet/IP通信で通信異常が発生する不具合�
     chap5/chap5-sec3.rst
     chap5/chap5-sec4.rst
     chap5/chap5-sec5.rst
+    chap5/chap5-sec6.rst
